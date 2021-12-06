@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <form class="form-group row" (ngSubmit)="addGame()">
+        <label class="col-12 mb-3 p-0"><input type="text" name="gameName" class="form-control"
+                                              placeholder="Game's name" [(ngModel)]="name"/></label>
+        <label class="col-12 mb-3 p-0"><input type="text" name="gameImg" class="form-control"
+                                              placeholder="Image URL" [(ngModel)]="imageUrl"/></label>
+        <div class="col-12 mb-3 p-0">
+          <select class="custom-select" name="gamePlatform" [(ngModel)]="platform">
+            <option value="nes">NES</option>
+            <option value="segaGenesis">Sega Genesis</option>
+            <option value="superNintendo">Super Nintendo</option>
+          </select>
+        </div>
+        <label class="col-12 mb-3 p-0"><textarea class="form-control" name="gameDescription"
+                                                 placeholder="Game's description" [(ngModel)]="description"></textarea></label>
+        <button class="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
+
