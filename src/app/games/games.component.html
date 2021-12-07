@@ -1,0 +1,14 @@
+<div class="row mt-2">
+  <div class="col mr-4">
+    <h4>Game platforms</h4>
+    <div class="list-group">
+      <a class="list-group-item list-group-item-action" [routerLink]="['/games', 'nes']">NES</a>
+      <a class="list-group-item list-group-item-action" [routerLink]="['/games', 'sega-genesis']">Sega Genesis</a>
+      <a class="list-group-item list-group-item-action" [routerLink]="['/games', 'super-nintendo']">Super Nintendo</a>
+    </div>
+  </div>
+
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -13,10 +13,18 @@ export class NewGameComponent {
   platform = 'nes';
   description = '';
 
-  constructor(private gameService: GameService) { }
+  constructor(private gameService: GameService) {
+  }
 
   addGame() {
-    const game = new Game(this.name, this.imageUrl, this.platform, this.description);
-    this.gameService.addGame(game);
+    if (this.name.trim().length && this.imageUrl.trim().length && this.description.trim().length) {
+      const game = new Game(this.name, this.imageUrl, this.platform, this.description);
+      this.gameService.addGame(game);
+
+      this.name = '';
+      this.imageUrl = '';
+      this.platform = 'nes';
+      this.description = '';
+    }
   }
 }

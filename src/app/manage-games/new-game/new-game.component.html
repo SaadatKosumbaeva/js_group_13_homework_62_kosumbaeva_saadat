@@ -1,6 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-6">
+      <h4>New game</h4>
       <form class="form-group row" (ngSubmit)="addGame()">
         <label class="col-12 mb-3 p-0"><input type="text" name="gameName" class="form-control"
                                               placeholder="Game's name" [(ngModel)]="name"/></label>
@@ -9,8 +10,8 @@
         <div class="col-12 mb-3 p-0">
           <select class="custom-select" name="gamePlatform" [(ngModel)]="platform">
             <option value="nes">NES</option>
-            <option value="segaGenesis">Sega Genesis</option>
-            <option value="superNintendo">Super Nintendo</option>
+            <option value="sega genesis">Sega Genesis</option>
+            <option value="super nintendo">Super Nintendo</option>
           </select>
         </div>
         <label class="col-12 mb-3 p-0"><textarea class="form-control" name="gameDescription"

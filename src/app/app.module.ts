@@ -9,6 +9,11 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { GameService } from './shared/game.service';
+import { GamesComponent } from './games/games.component';
+import { PlatformGamesComponent } from './games/platform-games/platform-games.component';
+import { GameDetailsComponent } from './games/platform-games/game-details/game-details.component';
+import { EmptyGameComponent } from './games/empty-game.component';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { GameService } from './shared/game.service';
     ManageGamesComponent,
     NewGameComponent,
     ToolbarComponent,
-    HomeComponent
+    HomeComponent,
+    GamesComponent,
+    PlatformGamesComponent,
+    GameDetailsComponent,
+    EmptyGameComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
