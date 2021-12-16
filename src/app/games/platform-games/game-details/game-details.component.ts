@@ -16,11 +16,9 @@ export class GameDetailsComponent implements OnInit {
   ngOnInit(): void {
     const paramId = this.route.snapshot.url[1].path.split('-').join(' ');
     this.route.params.subscribe((params: Params) => {
-      const gameId = parseInt(params['id']);
+      const gameId = params['game-id'];
       this.games = this.gameService.getGamesByPlatform(paramId);
       this.game = this.games[gameId];
-    })
-
-    console.log(this.route);
+    });
   }
 }

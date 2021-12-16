@@ -1,8 +1,11 @@
 <div class="row mt-2">
-  <a *ngFor="let game of games; let i = index" target="_blank" [routerLink]="[i.toString()]" class="col-3 card mr-3 row justify-content-center align-items-center">
-    <img [src]="game.imageUrl" class="card-img-top pt-3" alt="{{ game.name }}" style="width: 100px">
-    <div class="card-body row">
-      <h5 class="card-title justify-content-center align-items-center text-dark">{{ game.name }}</h5>
+  <a *ngFor="let game of games; let i = index" [routerLink]="[i.toString()]"
+     class="col-3 card mr-4 row justify-content-center align-items-center">
+    <div *ngIf="game">
+      <img [src]="game.imageUrl" class="card-img-top pt-3" alt="{{ game.name }}" style="width: 100px">
+      <div class="card-body row">
+        <h5 class="card-title justify-content-center align-items-center text-dark">{{ game.name }}</h5>
+      </div>
     </div>
   </a>
 </div>

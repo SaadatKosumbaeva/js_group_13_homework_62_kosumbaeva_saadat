@@ -12,10 +12,6 @@ export class GameService {
     new Game('AFK Arena', 'https://softcatalog.info/sites/default/files/styles/program_logo/public/program/logo/afk_arena_android-logo.png', 'super nintendo', 'AFK Arena перенесёт игрока в мистические лабиринты Эсперии, расположенные в Вершинах времени. Насладитесь захватывающим путешествием, собирайте карты уникальных героев, создавайте фракции с друзьями и участвуйте в эпических сражениях с сотнями врагов со всего мира.'),
   ];
 
-  getGames() {
-    return this.games.slice();
-  }
-
   getGamesByPlatform(platform: string) {
     return this.games.filter(game => game.platform === platform);
   }

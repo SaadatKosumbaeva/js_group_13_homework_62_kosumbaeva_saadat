@@ -16,7 +16,7 @@ export class PlatformGamesComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       const paramsId = params['id'].split('-').join(' ');
       this.games = this.gameService.getGamesByPlatform(paramsId);
-    })
+    });
 
     this.gameService.gamesChange.subscribe((games: Game[]) => {
       this.games = games;
